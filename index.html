@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Common Well — Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      line-height: 1.5;
+      background-color: #ffffff;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    header {
+      position: relative;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    header img {
+      max-width: 180px;
+      transition: 0.3s ease;
+    }
+    .title-text {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+    .title-text h1,
+    .title-text h3 {
+      font-family: 'Playfair Display', serif;
+      color: #205072;
+      margin: 0.3rem 0;
+    }
+    .title-text h1 {
+      font-size: 2.6rem;
+    }
+    .title-text h3 {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    h2 {
+      color: #3a7ca5;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+    .social-icons {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin: 0 10px;
+    }
+    .social-icons img {
+      width: 30px;
+    }
+    .buttons {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .buttons a,
+    .buttons button {
+      background-color: #3a7ca5;
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+    #menuDropdown {
+      text-align: center;
+      display: none;
+      margin-top: 1rem;
+    }
+    #menuDropdown a {
+      display: block;
+      margin: 0.5rem 0;
+      color: #3a7ca5;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #3a7ca5;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="title-text">
+      <h1>Common Well</h1>
+      <h3>Wellness for all, blending modern science with natural living</h3>
+    </div>
+    <img src="logo.png" alt="Common Well Logo" id="mainLogo">
+  </header>
+
+  <div class="container">
+    <div class="social-icons">
+      <a href="https://instagram.com/commonwellco" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+      <a href="https://tiktok.com/@common.wel" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok"></a>
+      <a href="https://youtube.com/@CommonWell" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+      <a href="mailto:commonwellonline@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"></a>
+    </div>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>At Common Well we believe every human deserves to be the best version of themselves. The answers have always been around us in Nature and now we’re smarter than ever as a species, and yet we’re the least happy and healthy we’ve ever been. That is why at Common Well we blend modern science and natural living to deliver a trusted, holistic, and simple approach to health and wellness.</p>
+    </section>
+
+    <div class="buttons">
+      <button onclick="toggleMenu()">Get Started</button>
+      <a href="/consultation.html">Free Consultation</a>
+    </div>
+
+    <div id="menuDropdown">
+      <a href="/services.html">Services</a>
+      <a href="/testimonials.html">Testimonials</a>
+      <a href="/references.html">References</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/connect.html">Connect With Us</a>
+      <a href="/shop.html">Shop</a>
+    </div>
+
+    <section id="testimonials" style="background-color: #3a7ca5; color: white; padding: 3rem 1rem; margin-top: 3rem;">
+      <h2 style="color: white; text-align: center;">What Our Clients Say</h2>
+      <div id="testimonial-carousel" style="max-width: 600px; margin: 2rem auto; text-align: center; font-size: 1.1rem;">
+        <p id="testimonial-text">"At 57 years old I am in the best shape of my life thanks to Logan."</p>
+        <div style="margin-top: 1rem;">
+          <button onclick="prevTestimonial()" style="margin-right: 10px; background: white; color: #3a7ca5; border: none; padding: 0.5rem 1rem; border-radius: 4px;">◀</button>
+          <button onclick="nextTestimonial()" style="background: white; color: #3a7ca5; border: none; padding: 0.5rem 1rem; border-radius: 4px;">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Email: <a href="mailto:commonwellonline@gmail.com">commonwellonline@gmail.com</a> | Phone: <a href="tel:+12052029048">(205) 202‑9048</a></p>
+      <p>&copy; 2025 Common Well</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menuDropdown');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    window.addEventListener('scroll', function () {
+      const logo = document.getElementById('mainLogo');
+      logo.style.maxWidth = window.scrollY > 30 ? '80px' : '180px';
+    });
+
+    const testimonials = [
+      ""At 57 years old I am in the best shape of my life thanks to Logan."",
+      ""I decided to hire a coach for my second bodybuilding competition and won my division! Not only did I have a ton of confidence on stage, I learned so much that I'll take with me forever!""
+    ];
+    let currentTestimonial = 0;
+
+    function updateTestimonial() {
+      document.getElementById("testimonial-text").textContent = testimonials[currentTestimonial];
+    }
+
+    function nextTestimonial() {
+      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+      updateTestimonial();
+    }
+
+    function prevTestimonial() {
+      currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+      updateTestimonial();
+    }
+
+    updateTestimonial();
+  </script>
+</body>
+</html>
