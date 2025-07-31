@@ -61,26 +61,23 @@
     .social-icons img {
       width: 30px;
     }
-
     .buttons {
-      margin: 2rem 0;
       text-align: center;
+      margin: 2rem 0;
     }
     .buttons a,
     .buttons button {
       background-color: #3a7ca5;
       color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      font-size: 1rem;
-      margin: 0.4rem 0;
+      padding: 0.9rem 2rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
       text-decoration: none;
       border: none;
       cursor: pointer;
-      width: 100%;
-      max-width: 260px;
+      display: inline-block;
     }
-
     #menuDropdown {
       text-align: center;
       display: none;
@@ -92,7 +89,6 @@
       color: #3a7ca5;
       text-decoration: none;
     }
-
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -128,7 +124,7 @@
     </section>
 
     <div class="buttons">
-      <button onclick="toggleMenu()">Get Started →</button>
+      <button onclick="toggleMenu()">Get Started</button>
       <a href="/consultation.html">Free Consultation</a>
     </div>
 
@@ -170,8 +166,8 @@
     });
 
     const testimonials = [
-      "\"At 57 years old I am in the best shape of my life thanks to Logan.\"",
-      "\"I decided to hire a coach for my second bodybuilding competition and won my division! Not only did I have a ton of confidence on stage, I learned so much that I'll take with me forever!\""
+      ""At 57 years old I am in the best shape of my life thanks to Logan."",
+      ""I decided to hire a coach for my second bodybuilding competition and won my division! Not only did I have a ton of confidence on stage, I learned so much that I'll take with me forever!""
     ];
     let currentTestimonial = 0;
 
